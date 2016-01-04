@@ -1,0 +1,23 @@
+{
+  "name": "pgbovine-react-babel-webpack-javascript-es6-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.9"
+  }
+}
