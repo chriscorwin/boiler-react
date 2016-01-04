@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {PersonComponent} from 'helper_module';
+import {Person} from 'components/Person';
+import {IntroCard} from 'components/IntroCard';
 
 ReactDOM.render(
-  <PersonComponent myName={"John"} myAge={32.5} />,
+  <div className="slds">
+    <IntroCard />
+    <Person myName={"John"} myAge={32.5} />
+  </div>,
   document.getElementById("exampleDiv")
 );

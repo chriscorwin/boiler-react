@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class PersonComponent extends React.Component {
+export class Person extends React.Component {
   render() {
     return (
       <div>
