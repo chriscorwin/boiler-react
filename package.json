@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@salesforce-ux/design-system": "^0.12.1",
+    "@salesforce-ux/design-system-react": "git+ssh://git@github.com:salesforce-ux/design-system-react.git#master",
     "babel-core": "^6.3.26",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.3.13",
