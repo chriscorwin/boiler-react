@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon} from 'design-system-react';
+import {SLDSIcons} from 'design-system-react';
 
 export class Person extends React.Component {
   render() {
@@ -7,7 +7,11 @@ export class Person extends React.Component {
       <div>
         <div>Name: {this.props.myName}</div>
         <div>Age: {this.props.myAge}</div>
-        <Icon />
+        <SLDSIcons.Icon assistiveText=""
+          category="utility"
+          className="slds-icon-text-default"
+          name="like"
+          size="large" />
       </div>
     );
   }
