@@ -16,8 +16,8 @@ export class IntroCard extends React.Component {
                     name="like"
                     size="small" />
               </div>
-              <div class="slds-media__body">
-                <h2 class="slds-text-heading--small slds-truncate">Card Header (2)</h2>
+              <div className="slds-media__body">
+                <h2 className="slds-text-heading--small slds-truncate">Card Header (2)</h2>
               </div>
             </div>
           </div>  
