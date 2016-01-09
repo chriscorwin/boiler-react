@@ -1,4 +1,5 @@
 import React from 'react';
+import {SLDSIcons} from 'design-system-react';
 
 export class IntroCard extends React.Component {
 
@@ -8,7 +9,12 @@ export class IntroCard extends React.Component {
         <div className="slds-card slds-theme--alert-texture">
           <div className="slds-card__header slds-grid">
             <h3 className="slds-text-heading--small">Internal Development</h3>
-          </div>
+          </div>  
+          <SLDSIcons.Icon assistiveText=""
+            category="utility"
+            className="slds-icon-text-default"
+            name="like"
+            size="small" />
           <p className="slds-text-body--small slds-m-horizontal--small">Internal development builds are available for use by internal customers. These reflect the state of the Salesforce product in future releases, and are prone to change in accordance with shifting priorities and designs throughout a release, and may contain components that we do not yet want to surface to external partners and customers.</p>
         </div>
       </div>
