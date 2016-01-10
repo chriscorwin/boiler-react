@@ -2,6 +2,12 @@ import React from 'react';
 import {SLDSIcons} from 'design-system-react';
 import {SLDSButtonExamples} from './SLDSButtonExamples';
 import {SLDSButtonGroupExamples} from './SLDSButtonGroupExamples';
+import {SLDSDropdownExamples} from './SLDSDropdownExamples';
+import {SLDSLookupExamples} from './SLDSLookupExamples';
+import {SLDSModalExamples} from './SLDSModalExamples';
+import {SLDSNotificationExamples} from './SLDSNotificationExamples';
+import {SLDSPicklistExamples} from './SLDSPicklistExamples';
+import {SLDSTooltipExamples} from './SLDSTooltipExamples';
 
 
 export class IntroCard extends React.Component {
@@ -30,6 +36,12 @@ export class IntroCard extends React.Component {
         <div className="exampleArea">
           <SLDSButtonExamples />
           <SLDSButtonGroupExamples />
+          <SLDSDropdownExamples />
+          <SLDSLookupExamples />
+          <SLDSModalExamples />
+          <SLDSPicklistExamples />
+          <SLDSNotificationExamples />
+          <SLDSTooltipExamples />
         </div>
 
       </div>
