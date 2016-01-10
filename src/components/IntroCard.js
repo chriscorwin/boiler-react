@@ -1,6 +1,9 @@
 import React from 'react';
 import {SLDSIcons} from 'design-system-react';
 import {SLDSButtonExamples} from './SLDSButtonExamples';
+import {SLDSButtonGroupExamples} from './SLDSButtonGroupExamples';
+
+
 export class IntroCard extends React.Component {
 
   render() {
@@ -24,9 +27,9 @@ export class IntroCard extends React.Component {
           <p className="slds-text-body--small slds-m-horizontal--small slds-m-bottom--large">Internal development builds are available for use by internal customers. These reflect the state of the Salesforce product in future releases, and are prone to change in accordance with shifting priorities and designs throughout a release, and may contain components that we do not yet want to surface to external partners and customers.</p>
         </div>
 
-        <div className="testArea">
+        <div className="exampleArea">
           <SLDSButtonExamples />
-
+          <SLDSButtonGroupExamples />
         </div>
 
       </div>
