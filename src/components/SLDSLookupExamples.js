@@ -50,11 +50,11 @@ export class SLDSLookupExamples extends React.Component {
           headerRenderer={SLDSLookup.DefaultHeader}
           iconCategory='standard'
           iconName='account'
-          items={items}
+          options={items}
           label="Account"
           onChange={this.onChange.bind(this)}
           onItemSelect={this.selectItem}
-          type="account"
+          salesforceObj="account"
         />
       </div>
     );

@@ -36,7 +36,7 @@ export class SLDSModalExamples extends React.Component {
         </p>
     <SLDSLookup
       emptyMessage="No Accounts Found"
-      items={[
+      options={[
         {label:'Paddy\'s Pub'},
         {label:'Tyrell Corp'},
         {label:'Paper St. Soap Company'},
@@ -119,7 +119,7 @@ export class SLDSModalExamples extends React.Component {
           <SLDSModal
             footer={[ <SLDSButton key="promptBtn" label='Got it' variant='neutral' onClick={this.closeModal('promptOpen')} /> ]}
             isOpen={this.state.promptOpen}
-            isPassive={false}
+            dismissable={false}
             onRequestClose={this.closeModal('promptOpen')}
             prompt='error'
             size='medium'
