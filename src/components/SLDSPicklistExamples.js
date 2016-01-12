@@ -1,5 +1,5 @@
 import React from 'react';
-import {SLDSPicklist} from 'design-system-react';
+import {SLDSPicklistBase} from 'design-system-react';
 
 export class SLDSPicklistExamples extends React.Component {
 
@@ -40,7 +40,7 @@ export class SLDSPicklistExamples extends React.Component {
       <div>
        <h4 className="slds-text-heading--medium slds-p-vertical--medium">Picklists</h4>
        
-       {/* <SLDSPicklist
+       <SLDSPicklistBase
          label="Contacts"
          modal={true}
          onClick={this.handleOnClick}
@@ -49,7 +49,7 @@ export class SLDSPicklistExamples extends React.Component {
          options={picklistOptions}
          placeholder = "Select a contact"
          value='C0'
-         /> */}
+         />
         
       </div>
     );
