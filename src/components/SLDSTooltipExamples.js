@@ -29,7 +29,6 @@ export class SLDSTooltipExamples extends React.Component {
           <SLDSTooltip
             align="right"
             content={<span>Tooltip with right alignment</span>}
-            openByDefault={true}
             targetElement={this.refs.tooltipOnClick}>
               <SLDSButton variant="brand" label="Hover to Open" />
             </SLDSTooltip>
