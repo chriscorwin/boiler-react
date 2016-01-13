@@ -1,5 +1,5 @@
 import React from 'react';
-import {SLDSIcons} from 'design-system-react';
+import {SLDSIcon} from 'design-system-react';
 import {SLDSButtonExamples} from './SLDSButtonExamples';
 import {SLDSButtonGroupExamples} from './SLDSButtonGroupExamples';
 import {SLDSDropdownExamples} from './SLDSDropdownExamples';
@@ -19,7 +19,7 @@ export class IntroCard extends React.Component {
           <div className="slds-card__header slds-grid ">
             <div className="slds-media slds-media-center">
               <div className="slds-media__figure">
-                <SLDSIcons.Icon assistiveText=""
+                <SLDSIcon assistiveText=""
                     category="utility"
                     className="slds-icon-text-default"
                     name="like"
@@ -41,7 +41,7 @@ export class IntroCard extends React.Component {
           <SLDSModalExamples />
           <SLDSPicklistExamples />
           <SLDSNotificationExamples />
-          <SLDSTooltipExamples />
+          {/*<SLDSTooltipExamples />*/}
         </div>
 
       </div>

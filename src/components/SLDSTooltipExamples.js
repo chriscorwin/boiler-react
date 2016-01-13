@@ -1,5 +1,5 @@
 import React from 'react';
-import {SLDSTooltip, SLDSIcons, SLDSButton} from 'design-system-react';
+import {SLDSTooltip, SLDSIcon, SLDSButton} from 'design-system-react';
 
 export class SLDSTooltipExamples extends React.Component {
 
@@ -20,7 +20,7 @@ export class SLDSTooltipExamples extends React.Component {
             content={<span>Tooltip on top</span>}
             targetElement={this.refs.tooltipOnHover}>
               <a href="javascript:void(0)">
-                <SLDSIcons.Icon assistiveText="info" category="utility" name="info" className="slds-icon-text-default" />
+                <SLDSIcon assistiveText="info" category="utility" name="info" className="slds-icon-text-default" />
               </a>
             </SLDSTooltip>
         </div>
