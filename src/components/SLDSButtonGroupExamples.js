@@ -1,5 +1,5 @@
 import React from 'react';
-import {SLDSButtonGroup, SLDSButton, SLDSButtonStateful, SLDSDropdown} from 'design-system-react';
+import {SLDSButtonGroup, SLDSButton, SLDSButtonStateful, SLDSMenuDropdown} from 'design-system-react';
 
 export class SLDSButtonGroupExamples extends React.Component {
 
@@ -37,7 +37,7 @@ export class SLDSButtonGroupExamples extends React.Component {
             label="Save"
             variant="neutral" />
 
-            <SLDSDropdown
+            <SLDSMenuDropdown
               assistiveText="More Options"
               iconName="down"
               iconVariant="border-filled"
@@ -62,7 +62,7 @@ export class SLDSButtonGroupExamples extends React.Component {
             type="icon"
             variant="icon" />
 
-            <SLDSDropdown
+            <SLDSMenuDropdown
               assistiveText="Sort"
               iconName="sort"
               iconVariant="more"
@@ -71,6 +71,7 @@ export class SLDSButtonGroupExamples extends React.Component {
               options={sortOptions}
               variant="icon" />
         </SLDSButtonGroup>
+
       </div>
     );
 

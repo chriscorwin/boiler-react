@@ -1,5 +1,5 @@
 import React from 'react';
-import {SLDSDropdown} from 'design-system-react';
+import {SLDSMenuDropdown} from 'design-system-react';
 
 export class SLDSDropdownExamples extends React.Component {
 
@@ -43,7 +43,7 @@ export class SLDSDropdownExamples extends React.Component {
       <div>
         <h4 className="slds-text-heading--medium slds-p-vertical--medium">Dropdowns</h4>
 
-        <SLDSDropdown
+        <SLDSMenuDropdown
           label="Dropdown Hover"
           onMouseEnter={this.handleMouseEnter}
           onMouseLeave={this.handleMouseLeave}
@@ -51,7 +51,7 @@ export class SLDSDropdownExamples extends React.Component {
           options={options}
           value='C0' />
 
-        <SLDSDropdown
+        <SLDSMenuDropdown
           label="Dropdown Click"
           onClick={this.handleOnClick}
           onSelect={this.handleOnSelect}
