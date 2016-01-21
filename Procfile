@@ -1,1 +1,1 @@
-webpack-dev-server --hot --inline --content-base public
+web: node server.js
