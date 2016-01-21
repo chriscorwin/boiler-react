@@ -2,7 +2,8 @@ var path = require('path');
 module.exports = {
   entry: './src/main.js',
   output: {
-    filename: 'bundle.js'
+    path: path.resolve('./public/assets/bundle'),
+    filename: 'app.js'
   },
   // assumes all JavaScript files you edit will be in src/
   // when importing from src/<file>.js, only need to specify as <file>
