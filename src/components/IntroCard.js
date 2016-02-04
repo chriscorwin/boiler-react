@@ -11,7 +11,6 @@ import {SLDSTooltipExamples} from './SLDSTooltipExamples';
 
 
 export class IntroCard extends React.Component {
-
   render() {
     return (
       <div className="slds-col--padded slds-size--1-of-1 slds-large-size--8-of-12">
