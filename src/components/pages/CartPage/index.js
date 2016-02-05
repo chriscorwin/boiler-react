@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-import { SLDSNotification } from 'design-system-react';
+import SLDSNotification from 'components/new-components/SLDSNotification';
 import Grid from 'design-system-react/lib/SLDSGrid';
 const Col = Grid.Column;
 import { Catalog } from './Catalog';
 import { Header } from './Header';
 import { ShoppingCart } from './ShoppingCart';
 import data from './data';
+
+const NOTIFICATION_DURATION = 3 * 1000;
 
 export class CartPage extends Component {
   constructor(props) {
@@ -62,6 +64,7 @@ export class CartPage extends Component {
       <SLDSNotification variant="toast" iconName="notification" theme={n.theme}
           content={n.content} isOpen={n.isOpen}
           onDismiss={this.onDismissNotification.bind(this)}
+          duration={NOTIFICATION_DURATION}
           />
       <Header />
       <Grid>
