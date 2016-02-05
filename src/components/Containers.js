@@ -1,46 +1,27 @@
 import React, { Component } from 'react';
 
+function renderDivWithBaseClass(className, componentProps) {
+  return <div className={`${className} ${componentProps || ''}`}>
+    {componentProps.children}
+  </div>;
+}
+
 export class Card extends Component {
-  render() {
-    const p = this.props;
-    return <div className={'slds-card ' + (p.className || '')}>
-      {p.children}
-    </div>;
-  }
+  render() { return renderDivWithBaseClass('slds-card', this.props); }
 }
 
 export class CardBody extends Component {
-  render() {
-    const p = this.props;
-    return <div className={'slds-card__body ' + (p.className || '')}>
-      {p.children}
-    </div>;
-  }
+  render() { return renderDivWithBaseClass('slds-card__body', this.props); }
 }
 
 export class Mediablock extends Component {
-  render() {
-    const p = this.props;
-    return <div className={'slds-media ' + (p.className || '')}>
-      {p.children}
-    </div>;
-  }
+  render() { return renderDivWithBaseClass('slds-media', this.props); }
 }
 
 export class MediablockBody extends Component {
-  render() {
-    const p = this.props;
-    return <div className={'slds-media__body ' + (p.className || '')}>
-      {p.children}
-    </div>;
-  }
+  render() { return renderDivWithBaseClass('slds-media__body', this.props); }
 }
 
 export class MediablockFigure extends Component {
-  render() {
-    const p = this.props;
-    return <div className={'slds-media__figure ' + (p.className || '')}>
-      {p.children}
-    </div>;
-  }
+  render() { return renderDivWithBaseClass('slds-media__figure', this.props); }
 }

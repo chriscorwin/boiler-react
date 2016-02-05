@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-import { Grid, Col } from 'components/Layout';
+import { SLDSNotification } from 'design-system-react';
+import Grid from 'design-system-react/lib/SLDSGrid';
+const Col = Grid.Column;
 import { Catalog } from './Catalog';
 import { Header } from './Header';
 import { ShoppingCart } from './ShoppingCart';
@@ -10,27 +12,57 @@ export class CartPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      notification: {
+        content: '',
+        isOpen: false,
+        theme: 'success'
+      },
       products: []
     };
   }
 
   onDeleteProduct(product, productIndex) {
+    let n = Object.assign({}, this.state.notification, {
+      theme: 'warning',
+      content: `Removed ${product.title} from cart`,
+      isOpen: true
+    });
+
     let newProducts = [].concat(this.state.products);
     newProducts.splice(productIndex, 1);
 
     this.setState({
-      products: newProducts
+      products: newProducts,
+      notification: n
     });
   }
 
+  onDismissNotification() {
+    let n = Object.assign({}, this.state.notification, {
+      isOpen: false
+    });
+    this.setState({ notification: n });
+  }
+
   onSelectProduct(product, productIndex) {
+    let n = Object.assign({}, this.state.notification, {
+      theme: 'success',
+      content: `Added ${product.title} to cart`,
+      isOpen: true
+    });
     this.setState({
-      products: [].concat(this.state.products, product)
+      products: [].concat(this.state.products, product),
+      notification: n
     });
   }
 
   render() {
+    const n = this.state.notification;
     return <div className="CartPage">
+      <SLDSNotification variant="toast" iconName="notification" theme={n.theme}
+          content={n.content} isOpen={n.isOpen}
+          onDismiss={this.onDismissNotification.bind(this)}
+          />
       <Header />
       <Grid>
         <Col className="slds-p-around--large slds-size--2-of-3">

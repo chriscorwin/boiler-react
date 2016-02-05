@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import { Grid, Col } from 'components/Layout';
+import Grid from 'design-system-react/lib/SLDSGrid';
+const Col = Grid.Column;
 
 export class WelcomePage extends Component {
   render() {
