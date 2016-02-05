@@ -1,13 +1,13 @@
 import React from 'react';
 import {SLDSIcon} from 'design-system-react';
-import {SLDSButtonExamples} from './SLDSButtonExamples';
-import {SLDSButtonGroupExamples} from './SLDSButtonGroupExamples';
-import {SLDSDropdownExamples} from './SLDSDropdownExamples';
-import {SLDSLookupExamples} from './SLDSLookupExamples';
-import {SLDSModalExamples} from './SLDSModalExamples';
-import {SLDSNotificationExamples} from './SLDSNotificationExamples';
-import {SLDSPicklistExamples} from './SLDSPicklistExamples';
-import {SLDSTooltipExamples} from './SLDSTooltipExamples';
+import {SLDSButtonExamples} from 'components/SLDSButtonExamples';
+import {SLDSButtonGroupExamples} from 'components/SLDSButtonGroupExamples';
+import {SLDSDropdownExamples} from 'components/SLDSDropdownExamples';
+import {SLDSLookupExamples} from 'components/SLDSLookupExamples';
+import {SLDSModalExamples} from 'components/SLDSModalExamples';
+import {SLDSNotificationExamples} from 'components/SLDSNotificationExamples';
+import {SLDSPicklistExamples} from 'components/SLDSPicklistExamples';
+import {SLDSTooltipExamples} from 'components/SLDSTooltipExamples';
 
 
 export class IntroCard extends React.Component {
