@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 function renderDivWithBaseClass(className, componentProps) {
-  return <div className={`${className} ${componentProps || ''}`}>
+  return <div className={`${className} ${componentProps.className || ''}`}>
     {componentProps.children}
   </div>;
 }
