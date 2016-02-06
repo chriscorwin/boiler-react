@@ -6,6 +6,7 @@ import { DataList } from './DataList';
 import { DataTable } from './DataTable';
 import { RenderMode } from './RenderMode';
 import { SortBy } from './SortBy';
+import { StateLookup } from './StateLookup';
 import data from './data';
 
 export class SpreadsheetPage extends Component {
@@ -13,10 +14,20 @@ export class SpreadsheetPage extends Component {
     super(props);
 
     this.state = {
+      renderMode: 'table',
       sortColumn1: 0,
       sortColumn2: 1,
-      renderMode: 'table'
+      stateFilter: ''
     };
+  }
+
+  filterData(stateFilter, data) {
+    const f = (stateFilter || '').toLowerCase();
+    if (f == '') return data;
+
+    return data.filter(d => {
+      return (d.state || '').toLowerCase().indexOf(stateFilter) >= 0
+    });
   }
 
   getColumns(data) {
@@ -56,13 +67,25 @@ export class SpreadsheetPage extends Component {
     });
   }
 
+  onChangeState(value) {
+    this.setState({
+      stateFilter: (value || '').replace(/^\s+/, '').replace(/\s+$/, '')
+    });
+  }
+
+  onSelectState(option) {
+    this.setState({
+      stateFilter: ((option && option.label) || '').replace(/^\s+/, '').replace(/\s+$/, '')
+    });
+  }
+
   renderData(mode, columns, sortedData) {
     return mode === 'table' ? <DataTable columns={columns} data={sortedData} /> : <DataList data={sortedData} />;
   }
 
   render() {
     const columns = this.getColumns(data);
-    const sortedData = this.getSortedData(data);
+    const sortedData = this.getSortedData(this.filterData(this.state.stateFilter, data));
 
     return <div className="SpreadsheetPage">
       <h1 className="slds-text-heading--large">Spreadsheet Test</h1>
@@ -73,6 +96,12 @@ export class SpreadsheetPage extends Component {
               onSelect={this.onSelectColumn.bind(this)} />
 
           <RenderMode mode={this.state.renderMode} onSelect={this.onSelectRenderMode.bind(this)} />
+
+          <div className="slds-p-around--medium">
+            <hr />
+
+            <StateLookup data={data} onChange={this.onChangeState.bind(this)} onSelect={this.onSelectState.bind(this)} />
+          </div>
         </Col>
         <Col className="slds-size--3-of-4 slds-scrollable--x">
           {this.renderData(this.state.renderMode, columns, sortedData)}
