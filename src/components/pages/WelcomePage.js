@@ -26,10 +26,12 @@ export class WelcomePage extends Component {
         <Col className="slds-p-around--large">
           <div className="slds-card">
             <div className="slds-card__header">
-              <h2 className="slds-text-heading--medium">e1</h2>
+              <h2 className="slds-text-heading--medium">
+                <Link to="spreadsheet">Spreadsheet Example</Link>
+              </h2>
             </div>
             <div className="slds-card__body slds-p-around--small">
-              asldjfa;lksdjf;klasjdf;ljka
+              An interactive, sortable table.
             </div>
           </div>
         </Col>
