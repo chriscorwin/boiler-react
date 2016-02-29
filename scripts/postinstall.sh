@@ -10,8 +10,3 @@
 # npm install --production
 # cd ../..
 
-if [ -n "$HEROKU_APP_NAME" ]
-then
-  webpack --config ./webpack.config.js --progress --colors
-fi
-cp -r node_modules/@salesforce-ux/design-system/assets public/
