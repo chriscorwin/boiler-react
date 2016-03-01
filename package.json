@@ -1,14 +1,25 @@
 {
   "name": "boiler-react",
   "version": "0.0.1",
-  "description": "Simple boilerplate for quickly spinning up react/es6 apps.",
+  "description": "Simple boilerplate for quickly spinning up react/es6 apps using webpack.",
   "main": "index.js",
   "scripts": {
     "start": "node server.dev.js",
     "postinstall": "scripts/postinstall.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donnieberg/boiler-react"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "boilerplate",
+    "skeleton",
+    "sample app",
+    "es6"
+  ],
   "author": "Donielle Berg",
   "license": "ISC",
   "dependencies": {
@@ -25,6 +36,10 @@
     "webpack": "^1.12.14"
   },
   "devDependencies": {
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
     "webpack-dev-server": "^1.14.1"
   }
 }

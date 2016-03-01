@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router'
-import { WelcomePage } from 'components/pages/WelcomePage';
+import { WelcomePage } from 'js/components/pages/WelcomePage';
 
 render((
   <Router history={hashHistory}>
