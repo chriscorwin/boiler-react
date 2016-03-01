@@ -1,7 +1,7 @@
 {
-  "name": "minimal-react-babel-webpack-javascript-es6-setup",
-  "version": "1.0.0",
-  "description": "",
+  "name": "boiler-react",
+  "version": "0.0.1",
+  "description": "Simple boilerplate for quickly spinning up react/es6 apps.",
   "main": "index.js",
   "scripts": {
     "start": "node server.dev.js",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Donielle Berg",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.5.2",

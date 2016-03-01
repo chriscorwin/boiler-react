@@ -14,5 +14,5 @@ In the terminal type: `npm install`
 
 In the terminal type: `npm run start`
 
-You should be able to access your new server at: [http://localhost:3000](http://localhost:3000).  (Use
+You should be able to access your new server at: [http://localhost:3001](http://localhost:3001).  (Use
 the environment variable SERVER_PORT to choose a different port.)
