@@ -12,8 +12,10 @@ module.exports = {
   // assumes all JavaScript files you edit will be in src/
   // when importing from src/<file>.js, only need to specify as <file>
   resolve: {
+    extensions: ['', '.js', '.jsx'],
     alias: {
       'components': __dirname + '/src/js/components',
+      'pages': __dirname + '/src/js/pages',
       'styles': __dirname + '/src/sass',
     },
     root: path.resolve('./src'), // must be absolute path
@@ -31,7 +33,7 @@ module.exports = {
         exclude: /node_modules/,
         loaders: [
           'react-hot-loader', // auto-refreshes browser
-          'babel-loader?cacheDirectory&presets[]=react&presets[]=es2015' // invokes Babel to translate React and ES6
+          'babel-loader?cacheDirectory&presets[]=react&presets[]=es2015&presets[]=stage-0' // invokes Babel with presets react, es6, and stage-0
         ]
       },
       {
